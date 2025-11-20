@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Edukasi Hewan</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      text-align: center;
+      padding: 20px;
+    }
+    h1 {
+      margin-bottom: 20px;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .animal {
+      background: white;
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      width: 180px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .animal:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+    }
+    .animal img {
+      width: 100%;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Edukasi Suara Hewan</h1>
+  <p>Klik gambar untuk mendengar suaranya.</p>
+
+  <div class="container">
+    <div class="animal" onclick="playSound('cat')">
+      <img src="cat.jpg" alt="Kucing" />
+      <h3>Kucing</h3>
+    </div>
+
+    <div class="animal" onclick="playSound('dog')">
+      <img src="anjing.jpg" alt="Anjing" />
+      <h3>Anjing</h3>
+    </div>
+
+    <div class="animal" onclick="playSound('cow')">
+      <img src="cow.jpg" alt="Sapi" />
+      <h3>Sapi</h3>
+    </div>
+  </div>
+
+  <audio id="cat" src="wiwok-detok.mp3"></audio>
+  <audio id="dog" src="19-juta-lapangan-pekerjaan.mp3"></audio>
+  <audio id="cow" src="hidup-jokowi.mp3"></audio>
+
+  <script>
+    function playSound(id) {
+      document.getElementById(id).play();
+    }
+  </script>
+</body>
+</html>
